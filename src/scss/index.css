@@ -45,7 +45,7 @@
   height: 20px;
   top: 64px;
   left: 0;
-  background: linear-gradient(#202020, rgba(255, 255, 255, 0));
+  background: linear-gradient(#111111, rgba(255, 255, 255, 0));
 }
 
 main {
@@ -59,19 +59,30 @@ main {
   align-items: center;
 }
 
-.play {
+button.controller {
   width: 100px;
   height: 100px;
   border: none;
-  background: url("../assets/svg/play.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  transition: filter 0.3s;
+  opacity: 0.5;
+  transition: opacity 0.5s;
   cursor: pointer;
 }
 
-.play:hover {
-  filter: brightness(0.9);
+button.play {
+  background: url("../assets/svg/play.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+button.pause {
+  display: none;
+  background: url("../assets/svg/pause.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.controller:hover {
+  opacity: 0.7;
 }
 
 .footer {
@@ -121,11 +132,11 @@ main {
   height: 20px;
   top: -20px;
   left: -300px;
-  background: linear-gradient(rgba(255, 255, 255, 0), #202020);
+  background: linear-gradient(rgba(255, 255, 255, 0), #111111);
 }
 
 body {
-  background-color: #202020;
+  background-color: #111111;
   overflow: hidden;
   margin: 0;
   font-family: "Roboto", sans-serif;

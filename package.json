@@ -1,0 +1,20 @@
+{
+  "name": "eco-sounds",
+  "version": "1.0.0",
+  "description": "eco-sounds",
+  "main": "index.js",
+  "scripts": {
+    "style": "sass --watch src/scss/index.scss src/scss/index.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avpankov/eco-sounds.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/avpankov/eco-sounds/issues"
+  },
+  "homepage": "https://github.com/avpankov/eco-sounds#readme"
+}

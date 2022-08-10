@@ -1,31 +1,31 @@
 let navList = document.querySelector('.nav__list');
+let controller = document.querySelector('.controller');
 let audio = document.createElement('audio');
+let main = document.querySelector('.main');
+let isPlaying = false;
+
+audio.src = `./src/assets/audio/forest.mp3`;
+audio.currentTime = 0;
 document.body.appendChild(audio);
 
-// navList.addEventListener('click', (e) => {
-//     console.log(e.target);
-// })
+controller.addEventListener('click', playMusic);
 
-let play = document.querySelector('.play');
-let pause = document.querySelector('.pause');
-
-play.addEventListener('click', () => {
-    play.style.display = 'none';
-    pause.style.display = 'block';    
-    playAudio('forest');
-});
-
-pause.addEventListener('click', () => {
-    play.style.display = 'block';
-    pause.style.display = 'none'; 
-    audio.pause();
-});
-
-
-function playAudio(bird) {
-    audio.src = `./src/assets/audio/${bird}.mp3`;
-    audio.autoplay = true;
+navList.addEventListener('click', (e) => {
+    if (!e.target.dataset.item) return;
+    main.style.background = `url('./src/assets/img/${e.target.dataset.item}.jpg')`;
+    audio.src = `./src/assets/audio/${e.target.dataset.item}.mp3`;
     audio.currentTime = 0;
-    audio.play();
-}
+    if (isPlaying) audio.play();
+})
 
+function playMusic() {
+    controller.classList.toggle('play');
+    controller.classList.toggle('pause');
+    if (!isPlaying) {
+        audio.play();
+        isPlaying = true;
+    } else {
+        audio.pause();
+        isPlaying = false;
+    }
+}

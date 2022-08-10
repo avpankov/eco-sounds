@@ -48,7 +48,7 @@
   background: linear-gradient(#111111, rgba(255, 255, 255, 0));
 }
 
-main {
+.main {
   height: calc(100vh - 120px);
   background: url("../assets/img/forest.jpg");
   background-size: cover;
@@ -57,6 +57,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: background 0.7s;
 }
 
 button.controller {
@@ -75,7 +76,6 @@ button.play {
 }
 
 button.pause {
-  display: none;
   background: url("../assets/svg/pause.svg");
   background-size: contain;
   background-repeat: no-repeat;

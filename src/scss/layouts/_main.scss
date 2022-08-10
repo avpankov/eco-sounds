@@ -1,4 +1,4 @@
-main {
+.main {
     height: calc(100vh - 120px);
     background: url('../assets/img/forest.jpg');
     background-size: cover;
@@ -7,6 +7,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background .7s;
 }
 button.controller {
     width: 100px;
@@ -24,7 +25,6 @@ button.play {
 }
 
 button.pause {
-    display: none;
     background: url('../assets/svg/pause.svg');
     background-size: contain;
     background-repeat: no-repeat;
